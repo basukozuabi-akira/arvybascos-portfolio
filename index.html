@@ -401,7 +401,14 @@ p{
 }
 .livebtn:hover{background:var(--purple-dark);border-color:var(--purple-dark);}
 .livebtn span{font-size:1.05em;}
-.livehint{font-size:.88rem;line-height:1.6;color:var(--muted);margin:.8rem 0 0;max-width:78ch;}
+.livehint{
+  width:100%;
+  max-width:none;
+  font-size:.88rem;
+  line-height:1.6;
+  color:var(--muted);
+  margin:.8rem 0 0;
+}
 
 button.livebtn{cursor:pointer;font-family:var(--display);}
 .process{margin:0;padding:0;list-style:none;counter-reset:step;display:grid;gap:.9rem;}
