@@ -192,6 +192,14 @@ p{
   max-width:22ch;
 }
 .section-lede{margin:1.1rem 0 0;font-size:1.05rem;max-width:64ch;color:var(--slate);}
+@media(min-width:621px) and (max-width:899px){
+  .hero p.lede,
+  .section-head,
+  .section-lede{
+    width:100%;
+    max-width:none;
+  }
+}
 
 /* ---------- about ---------- */
 .about-grid{display:grid;gap:clamp(1.8rem,4vw,3rem);grid-template-columns:1fr;align-items:start;}
@@ -212,12 +220,26 @@ p{
   color:var(--purple);margin:0 0 1.2rem;padding-bottom:.7rem;
   border-bottom:1px solid var(--line);
 }
-.glance dl{margin:0;display:grid;gap:1rem;}
+.glance dl{margin:0;display:grid;gap:.7rem;}
+.glance-item{
+  display:grid;
+  grid-template-columns:minmax(118px,.38fr) 1fr;
+  border:1px solid var(--line);
+  border-radius:8px;
+  overflow:hidden;
+  background:#fff;
+}
 .glance dt{
   font-family:var(--display);font-size:.7rem;font-weight:600;
-  letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem;
+  letter-spacing:.11em;text-transform:uppercase;color:var(--purple);
+  background:var(--purple-soft);padding:.75rem .85rem;
+  border-right:1px solid #D9C3F5;
 }
-.glance dd{margin:0;font-size:.95rem;line-height:1.55;color:var(--ink);}
+.glance dd{margin:0;padding:.7rem .85rem;font-size:.95rem;line-height:1.55;color:var(--ink);}
+@media(max-width:560px){
+  .glance-item{grid-template-columns:1fr;}
+  .glance dt{border-right:0;border-bottom:1px solid #D9C3F5;}
+}
 
 .timeline-block{margin-top:clamp(2.2rem,5vw,3.2rem);}
 .timeline{
@@ -602,24 +624,15 @@ footer{padding:2.5rem 0;font-size:.88rem;color:var(--muted);text-align:center;bo
       <aside class="glance">
         <h3>At a glance</h3>
         <dl>
-          <dt>Based in</dt>
-          <dd>Okinawa, Japan (JST) — available remotely</dd>
-          <dt>Current role</dt>
-          <dd>Teacher, middle school international school (second year)</dd>
-          <dt>Experience</dt>
-          <dd>15 years · Kinder to Senior High · public, private and international</dd>
-          <dt>Education</dt>
-          <dd>BSEd — Technology and Livelihood Education</dd>
-          <dt>Credentials</dt>
-          <dd>Licensed teacher · Montessori certified</dd>
-          <dt>Subjects</dt>
-          <dd>Algebra · Geometry · Science · English (Grammar, Literature, Vocabulary &amp; Spelling) · US History · World History</dd>
-          <dt>Curricula</dt>
-          <dd>Abeka · Enlightium</dd>
-          <dt>Builds with</dt>
-          <dd>HTML · CSS · JavaScript · PHP · MySQL · WordPress</dd>
-          <dt>Languages</dt>
-          <dd>English — fluent, spoken and written · Tagalog — native</dd>
+          <div class="glance-item"><dt>Based in</dt><dd>Okinawa, Japan (JST) — available remotely</dd></div>
+          <div class="glance-item"><dt>Current role</dt><dd>Teacher, middle school international school (second year)</dd></div>
+          <div class="glance-item"><dt>Experience</dt><dd>15 years · Kinder to Senior High · public, private and international</dd></div>
+          <div class="glance-item"><dt>Education</dt><dd>BSEd — Technology and Livelihood Education</dd></div>
+          <div class="glance-item"><dt>Credentials</dt><dd>Licensed teacher · Montessori certified</dd></div>
+          <div class="glance-item"><dt>Subjects</dt><dd>Algebra · Geometry · Science · English (Grammar, Literature, Vocabulary &amp; Spelling) · US History · World History</dd></div>
+          <div class="glance-item"><dt>Curricula</dt><dd>Abeka · Enlightium</dd></div>
+          <div class="glance-item"><dt>Builds with</dt><dd>HTML · CSS · JavaScript · PHP · MySQL · WordPress</dd></div>
+          <div class="glance-item"><dt>Languages</dt><dd>English — fluent, spoken and written · Tagalog — native</dd></div>
         </dl>
       </aside>
     </div>
