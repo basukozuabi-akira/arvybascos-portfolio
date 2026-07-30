@@ -145,6 +145,8 @@ p{
   font-family:var(--display);font-weight:700;
   font-size:clamp(1rem, .82rem + .95vw, 1.55rem);
   color:var(--ink);margin:0 0 1.4rem;letter-spacing:-.01em;line-height:1.32;
+  text-align:left;
+  text-justify:auto;
 }
 .hero p.lede{max-width:48ch;font-size:1.06rem;line-height:1.7;color:var(--slate);margin:0 0 2.2rem;}
 .ctas{display:flex;flex-wrap:wrap;gap:.9rem;margin-bottom:2.6rem;}
@@ -192,6 +194,19 @@ p{
   max-width:22ch;
 }
 .section-lede{margin:1.1rem 0 0;font-size:1.05rem;max-width:64ch;color:var(--slate);}
+@media(min-width:900px){
+  #about > .wrap > .section-head,
+  #work > .wrap > .section-head{
+    width:100%;
+    max-width:none;
+  }
+  #about > .wrap > .section-head h2,
+  #work > .wrap > .section-head h2,
+  #about > .wrap > .section-head .section-lede,
+  #work > .wrap > .section-head .section-lede{
+    max-width:none;
+  }
+}
 @media(min-width:621px) and (max-width:899px){
   .hero p.lede,
   .section-head,
